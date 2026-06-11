@@ -87,8 +87,44 @@
       padding: 0.12em 0.4em;
     }
 
-    /* ---------- hero ---------- */
-    .hero { margin-top: clamp(3rem, 8vh, 5rem); }
+    /* ---------- tabs ---------- */
+    .tab-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .tabs {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .tabs label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid transparent;
+    }
+    .tabs label:hover { color: var(--ink); }
+    #tab-home:checked ~ .tabs label[for="tab-home"],
+    #tab-founder:checked ~ .tabs label[for="tab-founder"] {
+      color: var(--teal);
+      border-bottom-color: var(--teal);
+    }
+    .tab-panels { margin-top: clamp(2rem, 6vh, 3.5rem); }
+    .tab-panel { display: none; }
+    #tab-home:checked ~ .tab-panels .panel-home,
+    #tab-founder:checked ~ .tab-panels .panel-founder { display: block; }
 
     .eyebrow {
       font-family: var(--mono);
@@ -144,6 +180,34 @@
       border-top: 1px solid var(--hairline);
     }
 
+    /* ---------- founder ---------- */
+    .founder h2 {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .founder p {
+      color: var(--muted);
+      max-width: 52ch;
+      font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    }
+    .founder p + p { margin-top: 1rem; }
+    .founder-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal);
+      padding-bottom: 2px;
+    }
+    .founder-link:hover { color: var(--teal); }
+
     /* ---------- contact ---------- */
     .contact { margin-top: 2.5rem; }
     .contact p { color: var(--muted); max-width: 46ch; }
@@ -198,25 +262,36 @@
       <span class="wordmark">TvamPashyami<span class="ai">AI</span></span>
     </header>
 
-    <!-- hero -->
-    <main class="hero">
-      <!-- EDIT: the name's meaning, the page's thesis -->
-      <p class="eyebrow">
-        <span class="sanskrit">त्वाम् पश्यामि</span>— I see you
-        <span class="phonetic" title="IPA: /tvəm pəˈʃjɑːmi/">pronounced tvum · puh-SHYAH-mee</span>
-      </p>
+    <input class="tab-input" type="radio" name="page-tab" id="tab-home" checked />
+    <input class="tab-input" type="radio" name="page-tab" id="tab-founder" />
 
-      <h1>Artificial intelligence systems for healthcare and life science innovators</h1>
+    <nav class="tabs" aria-label="Page sections">
+      <label for="tab-home" role="tab">Home</label>
+      <label for="tab-founder" role="tab">About</label>
+    </nav>
 
-      <p class="lede">We partner with early-stage startups, clinical researchers and doctors —  to build production grade AI systems that scale reliably. Built for environments where correctness and stability matters more than speed of prototyping.</p>
+    <main class="tab-panels">
+      <section class="tab-panel panel-home" role="tabpanel">
+        <p class="eyebrow">
+          <span class="sanskrit">त्वाम् पश्यामि</span>— I see you
+          <span class="phonetic" title="IPA: /tvəm pəˈʃjɑːmi/">pronounced tvum · puh-SHYAH-mee</span>
+        </p>
 
-      <!-- <p class="sectors">Finance · Healthcare · AI/ML Solutions</p> -->
+        <h1>Artificial intelligence systems for healthcare and life science innovators</h1>
 
-      <!-- contact -->
-      <section class="contact">
-        <p>If you're with data and drive in the healthcare and life science space, we would like to hear from you.</p>
-        <!-- EDIT: your contact address -->
-        <a class="email" href="mailto:jimy3bansal@gmail.com">hello@tvampashyami.com</a>
+        <p class="lede">We partner with early-stage startups, clinical researchers and doctors —  to build production grade AI systems that scale reliably. Built for environments where correctness and stability matters.</p>
+
+        <section class="contact">
+          <p>If you're with data and drive in the healthcare and life science space, we would like to hear from you.</p>
+          <a class="email" href="mailto:jimy3bansal@gmail.com">hello@tvampashyami.com</a>
+        </section>
+      </section>
+
+      <section class="tab-panel panel-founder founder" role="tabpanel">
+        <h2>Jaimita Bansal</h2>
+        <p>Jaimita is the founder of TvamPashyami AI. She has a decade of AI/ML experience at Goldman Sachs, building natural-language data discovery tools on highly regulated finance data just like healthcare — and has led applied ML work on large-scale data lake operations. She holds a Master's in Computer Science from IIT Kanpur and holds 2 patents in Generative AI/ML space.</p>
+        <p>Her approach as an engineer: start simple, add complexity only when the problem demands it — the same discipline production AI needs in regulated environments.</p>
+        <a class="founder-link" href="https://www.linkedin.com/in/jaimita/" rel="noopener noreferrer">LinkedIn →</a>
       </section>
     </main>
   </div>
