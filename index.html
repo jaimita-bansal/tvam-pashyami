@@ -50,7 +50,7 @@
       max-width: 720px;
       margin: 0 auto;
       padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 2rem);
-      flex: 0;
+      flex: 1;
       display: flex;
       flex-direction: column;
     }
@@ -60,6 +60,8 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--hairline);
     }
     .aperture {
       width: 42px;
@@ -159,6 +161,8 @@
       margin: 0 auto;
       width: 100%;
       border-top: 1px solid var(--hairline);
+      flex-shrink: 0;
+      margin-top: auto;
     }
 
     /* ---------- accessibility ---------- */
@@ -193,7 +197,7 @@
 
       <p class="lede">We build for the world's most regulated industries — finance and healthcare —  to get the answer right, explain how it got there and hold up to the standards and rules these industries run on.</p>
 
-      <p class="sectors">Finance · Healthcare · AI/ML Solutions</p>
+      <!-- <p class="sectors">Finance · Healthcare · AI/ML Solutions</p> -->
 
       <!-- contact -->
       <section class="contact">
