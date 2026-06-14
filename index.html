@@ -6,9 +6,30 @@
 
   <!-- ====== EDIT THESE: title + description show in search results and link previews ====== -->
   <title>TvamPashyami AI</title>
-  <meta name="description" content="TvamPashyami AI builds artificial intelligence for finance and healthcare — accurate, explainable, and compliant by design." />
+  <meta name="description" content="TvamPashyami AI builds artificial intelligence for healthcare and finance data — where being right is the whole job." />
+
+  <!-- ====== Open Graph + Twitter: the card shown when the link is pasted into LinkedIn / Slack / X ======
+       NOTE: replace tvampashyami.com below if your live domain differs (e.g. .ai).
+       og:image MUST be a real hosted file (see note) — a 1200×630 PNG/JPG at the URL below. -->
+  <link rel="canonical" href="https://tvampashyami.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvampashyami.com/" />
+  <meta property="og:title" content="TvamPashyami AI" />
+  <meta property="og:description" content="TvamPashyami AI builds artificial intelligence for healthcare and finance data — where being right is the whole job." />
+  <meta property="og:image" content="https://tvampashyami.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TvamPashyami AI" />
+  <meta name="twitter:description" content="TvamPashyami AI builds artificial intelligence for healthcare and finance data — where being right is the whole job." />
+  <meta name="twitter:image" content="https://tvampashyami.com/og-image.png" />
+
   <!-- Favicon: the bow + faded string + bindu, inline so there's no extra file to host -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='2.5 2.5 27 27'%3E%3Cline x1='8' y1='5' x2='8' y2='27' stroke='%230F6B66' stroke-width='3' opacity='0.32' stroke-linecap='round'/%3E%3Cpath d='M8,5C18,9,18,23,8,27' fill='none' stroke='%230F6B66' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='16' r='2.6' fill='%23C9863A'/%3E%3C/svg%3E" />
+
+  <!-- Brand accent some apps use to tint the preview / mobile chrome -->
+  <meta name="theme-color" content="#0F6B66" />
+
   <!-- Type: Fraunces (display serif), IBM Plex Sans (body), IBM Plex Mono (labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -194,9 +215,21 @@
       font-size: clamp(0.95rem, 2.2vw, 1.05rem);
     }
     .founder p + p { margin-top: 1rem; }
+    /* the closing aphorism — set apart so it lands instead of trailing off */
+    .creed {
+      display: block;
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--hairline);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.6vw, 1.2rem);
+      color: var(--ink);
+      max-width: 52ch;
+    }
     .founder-link {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 1.6rem;
       font-family: var(--mono);
       font-size: 0.85rem;
       color: var(--ink);
@@ -275,10 +308,10 @@
           <span class="phonetic" title="IPA: /tvəm pəˈʃjɑːmi/">pronounced tvum · puh-SHYAH-mee</span>
         </p>
 
-        <h1>Artificial intelligence for healthcare and finance data - where being right is the whole job</h1>
+        <h1>Artificial intelligence for healthcare and finance data — where being right is the whole job</h1>
 
-        <p class="lede">We partner with early-stage startups, clinical researchers, doctors and fintech teams —  to innovate and build production grade systems combining AI and Data Science that are precise, stable, and compliant. We also make room for non-profits working on critical healthcare problems. </p>
-        
+        <p class="lede">We partner with early-stage startups, clinical researchers, doctors and fintech teams — to innovate and build production-grade systems combining AI and Data Science that are precise, stable, and compliant. We also make room for non-profits working on critical healthcare problems.</p>
+
         <p class="lede">If you have the data, we know what you can do with AI. Reach out.</p>
 
         <section class="contact">
@@ -289,9 +322,9 @@
       <section class="tab-panel panel-founder founder" role="tabpanel">
         <h2>Jaimita Bansal</h2>
         <p>Jaimita is an AI/ML + Data architect formerly at Goldman Sachs. Her decade-long experience there, within the deep trenches of New York City's financial district, has uniquely equipped her to set a solid vision and strategy for — and drive the execution of — the hard data and AI problems that demand the rigour, precision, stability and compliance that the financial industry — and any other regulated industry — requires. She is a named inventor on two patents in generative AI for finance, holds a Master's in Computer Science from IIT Kanpur, and conducts active research in healthcare AI.</p>
-          <p>With a passion to drive meaningful change and impact, she founded TvamPashyami AI (Sanskrit for "I see you") because the same rigour and regulation that finance demands is exactly what healthcare AI still needs — and rarely gets. 
-          <i>  While money runs the world, health keeps it alive. </i> </p>
-          <a class="founder-link" href="https://www.linkedin.com/in/jaimita/" target="_blank rel="noopener noreferrer">LinkedIn →</a>
+        <p>With a passion to drive meaningful change and impact, she founded TvamPashyami AI (Sanskrit for "I see you") because the same rigour and regulation that finance demands is exactly what healthcare AI still needs — and rarely gets.</p>
+        <em class="creed">Money runs the world, health keeps it alive.</em>
+        <a class="founder-link" href="https://www.linkedin.com/in/jaimita/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
       </section>
     </main>
   </div>
